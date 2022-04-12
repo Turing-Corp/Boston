@@ -18,3 +18,8 @@ jobs:
       run: npm install
     - name: Run tests and collect coverage
       run: npm run test
+    - name: Push to Codecov uploader
+      run: |
+        curl -Os https://uploader.codecov.io/latest/linux/codecov
+        chmod +x codecov ./codecov
+
